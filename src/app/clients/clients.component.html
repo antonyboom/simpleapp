@@ -1,0 +1,38 @@
+<md-card>
+<md-card-title color="primary back-header">Employees</md-card-title>
+<div class="clients">
+  <button md-raised-button
+          color="primary"
+          routerLink="/new-employee"
+          class="employee"
+          routerLinkActive="active">Add Employee
+  </button>
+  <table id="clients">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Employee</th>
+      <th>Salary</th>
+      <th>Department</th>
+      <th>Phone</th>
+      <th >Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let client of clients">
+      <td>{{client['id']}}</td>
+      <td>{{client['firstName']}} {{client['lastName']}}</td>
+      <td>{{client['salary'] | currency:'USD':true:'1.2-2'}}</td>
+      <td>{{client['departmentName']}}</td>
+      <td>{{client['phone']}}</td>
+      <td align="center">
+        <button md-mini-fab (click)="removeEmployee(client)">
+          <md-icon fontSet="fa" fontIcon="fa-trash-o" color="warn"></md-icon>
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</md-card>
+

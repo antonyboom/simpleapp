@@ -1,0 +1,31 @@
+.departments {
+  margin-top: 50px;
+  text-align: left;
+}
+
+#departments {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#departments td, #departments th {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+#departments tr:nth-child(even){background-color: #f2f2f2;}
+
+#departments tr:hover {background-color: #ddd;}
+
+#departments th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.department {
+  margin-bottom: 6px;
+}

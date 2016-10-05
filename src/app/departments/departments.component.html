@@ -1,0 +1,35 @@
+<md-card>
+  <md-card-title color="primary back-header">Departments</md-card-title>
+  <div class="departments">
+    <button md-raised-button
+            color="primary"
+            routerLink="/new-department"
+            class="department"
+            routerLinkActive="active">Add Department
+    </button>
+    <table id="departments">
+      <thead align="center">
+      <tr>
+        <th >ID</th>
+        <th>Name od Department</th>
+        <th >Description</th>
+        <th >Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let dep of departments">
+        <td>{{dep['id']}}</td>
+        <td>{{dep['name']}}</td>
+        <td>{{dep['description']}}</td>
+        <td align="center">
+          <button md-mini-fab (click)="removeDepartment(dep)">
+            <md-icon fontSet="fa" fontIcon="fa-trash-o" color="warn"></md-icon>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</md-card>
+
+

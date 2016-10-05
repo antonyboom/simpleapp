@@ -1,0 +1,93 @@
+<div class="container">
+    <md-card class="demo-card demo-basic">
+      <md-card-title color="primary back-header">Employee Form</md-card-title>
+      <md-card-content>
+        <form (ngSubmit)="onSubmit(model)" #employeeForm="ngForm">
+          <md-toolbar for="firstName">First Name</md-toolbar>
+          <md-input
+            class="demo-full-width input-text"
+            type="text"
+            id="firstName"
+            required
+            [(ngModel)]="model.firstName"
+            name="firstName"
+            #firstName="ngModel">
+          </md-input>
+
+          <md-toolbar for="lastName">Last Name</md-toolbar>
+          <md-input
+            class="demo-full-width input-text"
+            type="text"
+            id="lastName"
+            required
+            [(ngModel)]="model.lastName"
+            name="lastName"
+            #lastName="ngModel">
+          </md-input>
+
+          <md-toolbar for="salary">Salary</md-toolbar>
+          <md-input
+            class="demo-full-width input-text"
+            type="number"
+            id="salary"
+            placeholder="USD"
+            required
+            [(ngModel)]="model.salary"
+            name="salary"
+            #salary="ngModel">
+          </md-input>
+
+          <md-toolbar for="departmentId">Department</md-toolbar>
+            <select class="demo-full-width option-department input-text"
+                    id="departmentId"
+                    required
+                    [(ngModel)]="model.departmentId"
+                    name="departmentId"
+                    #departmentId="ngModel">
+              <option
+                *ngFor="let department of departments"
+                [value]="department.id">{{department.name}}
+              </option>
+            </select>
+
+          <md-toolbar for="phone">Phone</md-toolbar>
+          <md-input
+            class="demo-full-width input-text"
+            type="number"
+            id="phone"
+            placeholder="phone #"
+            required
+            [(ngModel)]="model.phone"
+            name="phone"
+            #phone="ngModel">
+          </md-input>
+
+          <button  md-raised-button color="primary"
+                   type="submit"
+                   class="btn btn-default"
+                   [disabled]="!employeeForm.form.valid">Submit
+          </button>
+        </form>
+      </md-card-content>
+    </md-card>
+  <md-card [hidden]="!submitted">
+      <md-card-title>You submitted the following:</md-card-title>
+    <md-list>
+      <md-list-item>
+        <label>First Name:</label> {{model.firstName}}
+      </md-list-item>
+      <md-list-item>
+        <label>Last Name:</label> {{model.lastName}}
+      </md-list-item>
+      <md-list-item>
+        <label>Salary:</label> {{model.salary}}
+      </md-list-item>
+      <md-list-item>
+        <label>Department:</label> {{model.departmentId}}
+      </md-list-item>
+      <md-list-item>
+        <label>Phone:</label> {{model.phone}}
+      </md-list-item>
+    </md-list>
+  </md-card>
+</div>

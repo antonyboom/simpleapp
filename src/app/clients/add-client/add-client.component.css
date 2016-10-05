@@ -1,0 +1,30 @@
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+.back-header {
+  background-color: #4CAF50;
+}
+
+.demo-full-width {
+  width: 100%;
+}
+
+.option-department {
+  height: 48px;
+  font-size: 14px;
+}
+
+.input-text {
+    font-size: 20px;
+  }
+
+label {
+  font-weight: 600;
+  margin-right: 15px;
+}
+
