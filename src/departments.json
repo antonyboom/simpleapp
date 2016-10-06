@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "name": "Architects",
+    "description": "Main Department"
+  },
+  {
+    "id": 2,
+    "name": "Front-End",
+    "description": "UI team"
+  },
+  {
+    "id": 3,
+    "name": "Back-End",
+    "description": "DB team"
+  }
+
+
+]
