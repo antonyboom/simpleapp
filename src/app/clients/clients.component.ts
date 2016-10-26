@@ -12,7 +12,7 @@ import {Observable} from "rxjs";
 
 export class ClientsComponent {
 
-  empUrl = 'https://ebsexpress-env.us-west-2.elasticbeanstalk.com/users/employees';
+  empUrl = 'http://ebsexpress-env.us-west-2.elasticbeanstalk.com/users/employees';
 
   clients: Object[];
   constructor(private http: Http) {

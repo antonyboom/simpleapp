@@ -14,7 +14,7 @@ import {Observable} from "rxjs";
 
 export class AddDepartmentComponent {
 
-  addUrl = 'https://ebsexpress-env.us-west-2.elasticbeanstalk.com/users/departments';
+  addUrl = 'http://ebsexpress-env.us-west-2.elasticbeanstalk.com/users/departments';
 
   public id: null;
   public name: '';

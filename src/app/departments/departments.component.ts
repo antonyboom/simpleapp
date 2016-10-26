@@ -12,7 +12,7 @@ import {Observable} from "rxjs";
 })
 export class DepartmentsComponent {
 
-  depUrl = 'https://ebsexpress-env.us-west-2.elasticbeanstalk.com/users/departments';
+  depUrl = 'http://ebsexpress-env.us-west-2.elasticbeanstalk.com/users/departments';
 
   departments: Object[];
   constructor(private http: Http) {
