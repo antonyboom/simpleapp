@@ -25,7 +25,7 @@ export class AddClientComponent {
   departmentId: null;
 
   constructor(private http: Http) {
-    http.get('https://ebsexpress-env.us-west-2.elasticbeanstalk.com/users/departments')
+    http.get('http://ebsexpress-env.us-west-2.elasticbeanstalk.com/users/departments')
       .map((res: Response) => res.json())
       .subscribe((departments: Array<any>) => this.departments = departments);
   }
